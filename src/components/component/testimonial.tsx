@@ -101,7 +101,7 @@ export function Testimonial() {
   )
 }
 
-function StarIcon(props) {
+function StarIcon(props: any) {
   return (
     <svg
       {...props}

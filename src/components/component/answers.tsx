@@ -6,7 +6,7 @@ export function Answers() {
       <div className="container mx-auto grid gap-10 px-4 md:grid-cols-2 md:gap-16 md:px-6">
         <div className="space-y-6">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What is our Service?</h2>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Qual é o nosso serviço?</h2>
             <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
               Our service is a comprehensive platform that provides a wide range of tools and features to help you
               streamline your business operations. From project management to customer relationship management, we've
@@ -104,7 +104,7 @@ export function Answers() {
   )
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: any) {
   return (
     <svg
       {...props}
@@ -123,7 +123,7 @@ function CheckIcon(props) {
   )
 }
 
-function ChevronDownIcon(props) {
+function ChevronDownIcon(props: any) {
   return (
     <svg
       {...props}
@@ -142,7 +142,7 @@ function ChevronDownIcon(props) {
   )
 }
 
-function XIcon(props) {
+function XIcon(props: any) {
   return (
     <svg
       {...props}
