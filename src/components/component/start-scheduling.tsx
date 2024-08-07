@@ -19,14 +19,14 @@ export function StartScheduling() {
               Agende agora mesmo sua ida ao Vapt Vupt
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-              Escolha o orgão e os serviços que você necessita e comece a agendar sua ida.
+              Escolha o órgãos e os serviços que você necessita e comece a agendar sua ida.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="flex items-center justify-center gap-2 flex-1">
                     <ComputerIcon className="h-4 w-4" />
-                    <span>Orgãos</span>
+                    <span>Órgãos</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="bottom" align="start">

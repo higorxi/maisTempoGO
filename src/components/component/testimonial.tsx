@@ -39,7 +39,7 @@ export function Testimonial() {
   }, [testimonials.length])
   const currentTestimonial = testimonials[currentIndex]
   return (
-    <section className="bg-background py-12 md:py-16 lg:py-20">
+    <section className="bg-background py-12 px-6 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="col-span-2 md:col-span-1 lg:col-span-2">

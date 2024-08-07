@@ -2,98 +2,92 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12 text-muted-foreground">
+    <footer className="bg-muted py-12 px-6 text-muted-foreground">
       <div className="container mx-auto grid grid-cols-1 gap-12 px-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         <div className="flex flex-col gap-4">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <div className="flex items-center gap-2">
             <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-bold">Acme Inc</span>
-          </Link>
+            <span className="text-xl font-bold">+</span><span className="text-lg font-bold">TEMPO GO</span>
+          </div>
           <div className="flex gap-4">
-            <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+            <a href="#" className="text-muted-foreground hover:underline">
               <TwitterIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+            </a>
+            <a href="#" className="text-muted-foreground hover:underline">
               <FacebookIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+            </a>
+            <a href="#" className="text-muted-foreground hover:underline">
               <InstagramIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+            </a>
+            <a href="#" className="text-muted-foreground hover:underline">
               <LinkedinIcon className="h-5 w-5" />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-medium">Products</h4>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Web Development
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Mobile Development
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            E-commerce
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Enterprise Solutions
-          </Link>
+          
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-medium">Services</h4>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Consulting
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Design
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Hosting
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Support
-          </Link>
+          <h4 className="text-sm font-bold">Principais Serviços</h4>
+          <a href="#" className="text-sm hover:underline">
+            CNH - RENOVAÇÃO
+          </a>
+          <a href="#" className="text-sm hover:underline">
+            RG - 1 VIA
+          </a>
+          <a href="#" className="text-sm hover:underline">
+            RG - 2 VIA
+          </a>
+          <a href="#" className="text-sm hover:underline">
+            SANEAGO - TRATAMENTO DE CASOS EXPECIONAIS
+          </a>
+          <a href="#" className="text-sm hover:underline">
+            PROCON
+          </a>
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-medium">Resources</h4>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
+          <h4 className="text-sm font-bold">Principais Órgãos</h4>
+          <a href="#" className="text-sm hover:underline">
+            AGEHAB
+          </a>
+          <a href="#" className="text-sm hover:underline">
+          AGRODEFESA
+          </a>
+          <a href="#" className="text-sm hover:underline">
+          COREN
+          </a>
+          <a href="#" className="text-sm hover:underline">
+          DETRAN
+          </a>
+          <a href="#" className="text-sm hover:underline">
+          IPASGO
+          </a>
+        </div>
+        <div className="grid gap-2">
+          <h4 className="text-sm font-bold">Recursos</h4>
+          <a href="#" className="text-sm hover:underline">
             Blog
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
+          </a>
+          <a href="#" className="text-sm hover:underline">
             Documentation
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
+          </a>
+          <a href="#" className="text-sm hover:underline">
             Tutorials
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
+          </a>
+          <a href="#" className="text-sm hover:underline">
             Templates
-          </Link>
-        </div>
-        <div className="grid gap-2">
-          <h4 className="text-sm font-medium">Company</h4>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Careers
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Contact
-          </Link>
-          <Link href="#" className="text-sm hover:underline" prefetch={false}>
-            Press
-          </Link>
+          </a>
         </div>
       </div>
       <div className="container mx-auto mt-12 flex flex-col items-center gap-4 px-4 text-xs sm:flex-row sm:justify-between">
-        <p>&copy; 2024 Acme Inc. All rights reserved.</p>
+        <p>&copy; 2024 Mais Tempo GO. Todos os direitos reservados.</p>
         <div className="flex gap-4">
-          <Link href="#" className="hover:underline" prefetch={false}>
-            Privacy Policy
-          </Link>
-          <Link href="#" className="hover:underline" prefetch={false}>
-            Terms of Use
-          </Link>
+          <a href="/privacyPolicy" className="hover:underline">
+            Política de Privacidade
+          </a>
+          <a href="/termsOfUser" className="hover:underline">
+            Termos de Uso
+          </a>
         </div>
       </div>
     </footer>
@@ -119,7 +113,6 @@ function FacebookIcon(props: any) {
   )
 }
 
-
 function InstagramIcon(props: any) {
   return (
     <svg
@@ -140,7 +133,6 @@ function InstagramIcon(props: any) {
     </svg>
   )
 }
-
 
 function LinkedinIcon(props: any) {
   return (
@@ -163,7 +155,6 @@ function LinkedinIcon(props: any) {
   )
 }
 
-
 function MountainIcon(props: any) {
   return (
     <svg
@@ -182,7 +173,6 @@ function MountainIcon(props: any) {
     </svg>
   )
 }
-
 
 function TwitterIcon(props: any) {
   return (

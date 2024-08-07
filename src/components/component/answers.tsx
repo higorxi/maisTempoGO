@@ -2,7 +2,7 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/component
 
 export function Answers() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-12 px-6 md:py-24 lg:py-32">
       <div className="container mx-auto grid gap-10 px-4 md:grid-cols-2 md:gap-16 md:px-6">
         <div className="space-y-6">
           <div>
@@ -76,7 +76,7 @@ export function Answers() {
             </Collapsible>
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>Existe algum vinculo com os orgãos?</span>
+                <span>Existe algum vinculo com os órgãos?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
