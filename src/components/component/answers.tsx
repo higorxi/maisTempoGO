@@ -8,58 +8,55 @@ export function Answers() {
           <div>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Qual é o nosso serviço?</h2>
             <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
-              Our service is a comprehensive platform that provides a wide range of tools and features to help you
-              streamline your business operations. From project management to customer relationship management, we've
-              got you covered.
+            Somos especializados em facilitar o agendamento de serviços no Vapt Vupt do estado de Goiás. Sabemos como pode ser complicado lidar com a burocracia e a espera, por isso, nossa missão é tornar esse processo o mais fácil e eficiente possível para você.
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Your Obligations</h3>
+            <h3 className="text-xl font-semibold">Nossas obrigações</h3>
             <ul className="mt-4 space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                <span>Provide accurate and up-to-date information</span>
+                <span>Realizamos o agendamento de sua ida ao Vapt Vupt</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                <span>Comply with our terms of service and privacy policy</span>
+                <span>Lhe informamos sobre o status do seu agendamento</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                <span>Maintain the security of your account</span>
+                <span>Buscamos as melhores datas e horários para o seu agendamento</span>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">What We Don't Do</h3>
+            <h3 className="text-xl font-semibold">O que não fazemos</h3>
             <ul className="mt-4 space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
-                <span>We don't share your data with third parties</span>
+                <span>Não compartilhamos seus dados com terceiros</span>
               </li>
               <li className="flex items-start gap-2">
                 <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
-                <span>We don't require you to sign long-term contracts</span>
+                <span>Não temos nenhum vínculo direto com o Vapt Vupt</span>
               </li>
               <li className="flex items-start gap-2">
                 <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
-                <span>We don't charge hidden fees or penalties</span>
+                <span>Não cobramos taxas ou penalidades ocultas</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="space-y-6">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Perguntas Frequentes</h2>
             <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
-              Here are the most common questions we receive about our service. If you have any other questions, please
-              don't hesitate to contact us.
+            Aqui estão as perguntas mais comuns que recebemos sobre nosso serviço. Se você tiver outras perguntas, não hesite em nos contatar.
             </p>
           </div>
           <div className="space-y-4">
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>What is the pricing structure?</span>
+                <span>Qual o valor do serviço?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
@@ -69,17 +66,17 @@ export function Answers() {
             </Collapsible>
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>How do I cancel my subscription?</span>
+                <span>Posso cancelar o serviço?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
                 You can cancel your subscription at any time by logging into your account and going to the billing
-                section. We don't require long-term contracts, so you can leave whenever you'd like.
+                section. We don&apos;t require long-term contracts, so you can leave whenever you&apos;d like.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>What kind of support do you offer?</span>
+                <span>Existe algum vinculo com os orgãos?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
@@ -89,7 +86,7 @@ export function Answers() {
             </Collapsible>
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>Do you offer any integrations?</span>
+                <span>O serviço de vocês é ilegal?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="px-4 pt-2 text-muted-foreground">

@@ -10,7 +10,7 @@ export function Testimonial() {
       name: "John Doe",
       city: "New York",
       service: "Hair Styling",
-      description: "The stylist was amazing and really listened to what I wanted. I'm so happy with the results!",
+      description: "The stylist was amazing and really listened to what I wanted. I am so happy with the results!",
       rating: 5,
     },
     {
@@ -18,7 +18,7 @@ export function Testimonial() {
       name: "Jane Smith",
       city: "Los Angeles",
       service: "Massage",
-      description: "The massage therapist was incredibly skilled and really helped me relax. I'll definitely be back.",
+      description: "The massage therapist was incredibly skilled and really helped me relax. I will definitely be back.",
       rating: 4,
     },
     {
