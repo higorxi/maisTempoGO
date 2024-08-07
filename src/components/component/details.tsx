@@ -33,7 +33,7 @@ export function Details() {
                 <div className="font-medium">Email:</div>
                 <div>john@example.com</div>
                 <div className="font-medium">Telefone:</div>
-                <div>+55 (62)1234567</div>
+                <div>+55 621234567</div>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export function Details() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-sm md:text-base">
               <div>
                 <div className="font-medium">Telefone:</div>
-                <div>+55 (62)1234567</div>
+                <div>+55 621234567</div>
               </div>
               <div>
                 <div className="font-medium">Email:</div>

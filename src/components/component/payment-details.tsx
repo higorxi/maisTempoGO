@@ -39,7 +39,7 @@ export function PaymentDetails() {
                 2
               </div>
               <div>
-                <p>Selecione a opção "Pagar via Pix".</p>
+                <p>Selecione a opção &quot;Pagar via Pix&quot;.</p>
               </div>
             </li>
             <li className="flex items-start gap-4">
