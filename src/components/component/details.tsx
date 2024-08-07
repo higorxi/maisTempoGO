@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
 
 export function Details() {
   return (
@@ -41,7 +41,7 @@ export function Details() {
           <div>
             <h2 className="text-lg md:text-xl font-semibold mb-2">Informações adicionais</h2>
             <p className="text-sm md:text-base text-muted-foreground">
-            Obrigado por reservar conosco. Esperamos que tudo ocorra bem na resolução do seu problema no Vapt Vupt. Por favor, não hesite em nos informar se você tiver alguma dúvida ou necessidade de assistência.
+              Obrigado por reservar conosco. Esperamos que tudo ocorra bem na resolução do seu problema no Vapt Vupt. Por favor, não hesite em nos informar se você tiver alguma dúvida ou necessidade de assistência.
             </p>
           </div>
           <Separator className="my-6 md:my-8 lg:my-10" />
@@ -61,7 +61,7 @@ export function Details() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function CircleCheckIcon(props: any) {
@@ -81,5 +81,5 @@ function CircleCheckIcon(props: any) {
       <circle cx="12" cy="12" r="10" />
       <path d="m9 12 2 2 4-4" />
     </svg>
-  )
+  );
 }
