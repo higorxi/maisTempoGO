@@ -67,9 +67,8 @@ export function Answers() {
                 <span className="text-gray-100">Qual o valor do serviço?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
-                Our pricing is based on the number of users and the features you need. We offer a range of plans to fit
-                your budget and requirements.
+              <CollapsibleContent className="px-4 pt-2 pb-4 text-black bg-white rounded-lg shadow-sm border-t-0">
+                Nossa precificação é baseada no número de usuários e nas funcionalidades que você precisa. Oferecemos uma variedade de planos para atender ao seu orçamento e necessidades.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
@@ -77,9 +76,8 @@ export function Answers() {
                 <span className="text-gray-100">Posso cancelar o serviço?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
-                You can cancel your subscription at any time by logging into your account and going to the billing
-                section. We don&apos;t require long-term contracts, so you can leave whenever you&apos;d like.
+              <CollapsibleContent className="px-4 pt-2 pb-4 text-black bg-white rounded-lg shadow-sm border-t-0">
+                Você pode cancelar sua assinatura a qualquer momento acessando sua conta e indo para a seção de faturamento. Não exigimos contratos de longo prazo, então você pode sair quando desejar.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
@@ -87,9 +85,8 @@ export function Answers() {
                 <span className="text-gray-100">Existe algum vínculo com os órgãos?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
-                We offer a variety of support options, including email, live chat, and a comprehensive knowledge base.
-                Our team is dedicated to helping you get the most out of our service.
+              <CollapsibleContent className="px-4 pt-2 pb-4 text-black bg-white rounded-lg shadow-sm border-t-0">
+                Somos uma empresa do setor privado devidamente regularizada, não possuímos vínculo com o Vapt Vupt ou qualquer outro órgão público. Nossa empresa auxilia no agendamento de documentos, e as taxas pagas em nosso site são únicas e exclusivas para a prestação de nossos serviços. Eventuais taxas e cobranças pagas junto ao órgão público solicitado não estão inclusas em nossa taxa de serviço.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
@@ -97,9 +94,8 @@ export function Answers() {
                 <span className="text-gray-100">O serviço de vocês é ilegal?</span>
                 <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
-                Yes, we offer a wide range of integrations with popular business tools and software. This allows you to
-                seamlessly connect our service with the tools you already use.
+              <CollapsibleContent className="px-4 pt-2 pb-4 text-black bg-white rounded-lg shadow-sm border-t-0">
+                Não, nosso serviço é totalmente legal. Oferecemos uma ampla gama de integrações com ferramentas e softwares empresariais populares, permitindo que você conecte nosso serviço com as ferramentas que já utiliza.
               </CollapsibleContent>
             </Collapsible>
           </div>
@@ -142,7 +138,7 @@ function ChevronDownIcon(props: any) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="m6 9 6 6 6-6" />
+      <path d="M19 9l-7 7-7-7" />
     </svg>
   )
 }
@@ -162,7 +158,7 @@ function XIcon(props: any) {
       strokeLinejoin="round"
     >
       <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
+      <path d="M6 6l12 12" />
     </svg>
   )
 }

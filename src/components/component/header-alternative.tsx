@@ -1,14 +1,22 @@
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
+import Image from "next/image"
+import Logo from '../../../public/logo_amarela.png';
 
 export function HeaderAlternative() {
   return (
-    <header className="w-full bg-background shadow-md shadow-[rgba(0,0,0,0.1)] py-4">
+    <header className="w-full bg-verdeGoias shadow-md shadow-[rgba(0,0,0,0.1)] py-4">
       <div className="container mx-auto flex items-center justify-center">
-        <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <MountainIcon className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold">Acme Inc.</span>
-        </Link>
+      <Link href="/" className="flex items-center" prefetch={false}>
+        <Image
+          src={Logo}
+          alt="Logo + tempo"
+          width={65}
+          height={25}
+          className="w-full object-cover"
+          style={{ aspectRatio: '65/25', objectFit: 'cover' }}
+        />
+      </Link>
       </div>
     </header>
   )

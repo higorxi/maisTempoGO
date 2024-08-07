@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from "../../../public/logo_amarela.png"
+import Logo from '../../../public/logo_amarela.png';
 
 export function Header() {
   const handleScroll = useCallback((event: any) => {
@@ -16,38 +16,38 @@ export function Header() {
   }, []);
 
   return (
-    <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4 bg-verdeGoias text-branco">
-      <Link href="/" className="flex items-center" prefetch={false}>
+    <header className="flex items-center justify-between px-4 py-3 md:px-8 md:py-5 bg-verdeGoias text-branco ">
+      <Link href="/" className="flex items-center hover:scale-105" prefetch={false}>
         <Image
           src={Logo}
-          alt='Logo + tempo'
+          alt="Logo + tempo"
           width={65}
           height={25}
           className="w-full object-cover"
           style={{ aspectRatio: '65/25', objectFit: 'cover' }}
         />
       </Link>
-      <nav className="flex items-center space-x-4 md:space-x-6">
-        <Link href="/" className="text-sm font-medium hover:underline underline-offset-4 text-branco" prefetch={false}>
+      <nav className="flex items-center space-x-4 md:space-x-6 ">
+        <Link href="/" className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105" prefetch={false}>
           Home
         </Link>
         <a
           href="#testimonials"
           onClick={handleScroll}
-          className="text-sm font-medium hover:underline underline-offset-4 text-branco"
+          className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105 "
         >
           Sobre nós
         </a>
         <a
           href="#answers"
           onClick={handleScroll}
-          className="text-sm font-medium hover:underline underline-offset-4 text-branco"
+          className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105"
         >
           Dúvidas
         </a>
         <Link
           href="/scheduling"
-          className="inline-flex h-9 items-center justify-center rounded-md border border-verdeGoias bg-amareloGoias px-4 py-2 text-sm font-medium text-verdeGoias shadow-sm transition-colors hover:bg-amareloClaro hover:text-azulGoias focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-verdeGoias disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-9 items-center justify-center rounded-md border border-verdeGoias bg-amareloGoias px-4 py-2 text-sm font-medium text-verdeGoias shadow-sm transition-transform transform hover:scale-105 hover:bg-white hover:text-verdeGoias hover:border-verdeGoias focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-verdeGoias disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
           AGENDAR AGORA

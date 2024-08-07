@@ -1,15 +1,25 @@
 import Link from "next/link"
+import Logo from '../../../public/logo_amarela.png';
+import Image from "next/image";
 
 export function FooterAlternative() {
   return (
-    <footer className="bg-muted py-6 text-muted-foreground">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8">
+    <footer className="bg-verdeGoias py-6 px-6 text-branco">
+      <div className="container mx-auto flex items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <MountainIcon className="h-6 w-6" />
-          <span className="text-sm font-medium">Mais Tempo GO</span>
+        <Link href="/" className="flex items-center" prefetch={false}>
+        <Image
+          src={Logo}
+          alt="Logo + tempo"
+          width={65}
+          height={25}
+          className="w-full object-cover"
+          style={{ aspectRatio: '65/25', objectFit: 'cover' }}
+        />
+      </Link>
         </div>
-        <div className="text-xs">&copy; 2024 Mais Tempo GO. All rights reserved.</div>
-        <Link href="#" className="text-sm hover:underline" prefetch={false}>
+        <div className="text-xs text-amareloClaro">&copy; 2024 Mais Tempo GO. Todos os direitos reservados.</div>
+        <Link href="#" className="text-sm text-amareloGoias hover:underline" prefetch={false}>
           suporte@maistempogo.com.br
         </Link>
       </div>

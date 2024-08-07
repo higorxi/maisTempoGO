@@ -51,7 +51,7 @@ export function StepByStepScheduling() {
         },
         body: JSON.stringify(formData),
       });
-      if (response.ok) {
+      if (!response.ok) {
         //const responseData = await response.json(); 
         //const { id } = responseData; 
         //setIdScheduling(id)
@@ -114,7 +114,21 @@ export function StepByStepScheduling() {
     { value: 'municipio2', label: 'Município 2' },
   ];
 
-  // Dados de revisão personalizados
+  const timeOptions = [
+    { value: '', label: 'Selecione um horário' },
+    { value: '09:00', label: '09:00' },
+    { value: '09:30', label: '09:30' },
+    { value: '10:00', label: '10:00' },
+    { value: '10:30', label: '10:30' },
+    { value: '11:00', label: '11:00' },
+    { value: '11:30', label: '11:30' },
+    { value: '12:00', label: '12:00' },
+    { value: '12:30', label: '12:30' },
+    { value: '13:00', label: '13:00' },
+    { value: '13:30', label: '13:30' },
+    { value: '14:00', label: '14:00' },
+  ];
+
   const reviewData = [
     { label: 'Nome Completo', value: formData.fullName },
     { label: 'CPF', value: formData.cpf },
@@ -141,7 +155,7 @@ export function StepByStepScheduling() {
             <div
               className={`z-10 flex-1 rounded-full py-2 text-sm font-medium text-center cursor-pointer transition-colors duration-300 ease-in-out ${
                 currentStep === 1
-                  ? 'bg-primary text-primary-foreground border-2 border-primary'
+                  ? 'bg-azulGoias text-primary-foreground border-2 border-primary'
                   : 'bg-background text-muted-foreground'
               }`}
               onClick={() => setCurrentStep(1)}
@@ -151,7 +165,7 @@ export function StepByStepScheduling() {
             <div
               className={`z-10 flex-1 rounded-full py-2 text-sm font-medium text-center cursor-pointer transition-colors duration-300 ease-in-out ${
                 currentStep === 2
-                  ? 'bg-primary text-primary-foreground border-2 border-primary'
+                  ? 'bg-azulGoias text-primary-foreground border-2 border-primary'
                   : 'bg-background text-muted-foreground'
               }`}
               onClick={() => setCurrentStep(2)}
@@ -161,7 +175,7 @@ export function StepByStepScheduling() {
             <div
               className={`z-10 flex-1 rounded-full py-2 text-sm font-medium text-center cursor-pointer transition-colors duration-300 ease-in-out ${
                 currentStep === 3
-                  ? 'bg-primary text-primary-foreground border-2 border-primary'
+                  ? 'bg-azulGoias text-primary-foreground border-2 border-primary'
                   : 'bg-background text-muted-foreground'
               }`}
               onClick={() => setCurrentStep(3)}
@@ -179,6 +193,7 @@ export function StepByStepScheduling() {
                   <Input
                     id="fullName"
                     name="fullName"
+                    type="name"
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
@@ -237,7 +252,7 @@ export function StepByStepScheduling() {
                 </div>
               </div>
               <div className="flex justify-end">
-                <Button className="bg-black text-white" onClick={handleNext}>
+                <Button variant='main' onClick={handleNext}>
                   Avançar
                 </Button>
               </div>
@@ -307,21 +322,22 @@ export function StepByStepScheduling() {
                     required
                   />
                 </div>
-                <div className="space-y-4">
-                  <Label htmlFor="time">Horário</Label>
-                  <Input
-                    id="time"
-                    name="time"
-                    type="time"
+                <div>
+                  <Label htmlFor="municipio">Horário</Label>
+                  <Select
+                    id="horario"
+                    name="horario"
                     value={formData.time}
                     onChange={handleInputChange}
+                    options={timeOptions}
                     required
+                    label={''}
                   />
                 </div>
               </div>
               <div className="flex justify-between">
-                <Button onClick={handlePrevious}>Voltar</Button>
-                <Button className="bg-black text-white" onClick={handleNext}>
+                <Button onClick={handlePrevious} className='bg-gray-500 hover:bg-gray-700'>Voltar</Button>
+                <Button onClick={handleNext} variant='main'>
                   Avançar
                 </Button>
               </div>
@@ -339,10 +355,10 @@ export function StepByStepScheduling() {
                 ))}
               </div>
               <div className="flex justify-between mt-4">
-                <Button className="bg-black text-white" onClick={handlePrevious}>
+                <Button className="bg-gray-500 hover:bg-gray-700 text-white" onClick={handlePrevious}>
                   Voltar
                 </Button>
-                <Button className="bg-black text-white" type="submit">
+                <Button variant='main' type="submit">
                   Confirmar
                 </Button>
               </div>

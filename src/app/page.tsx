@@ -3,6 +3,7 @@ import { Footer } from "@/components/component/footer";
 import { Header } from "@/components/component/header";
 import { StartScheduling } from "@/components/component/start-scheduling";
 import { Testimonial } from "@/components/component/testimonial";
+import { TestimonialsAlternative } from "@/components/component/testimonials-alternative";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Header />
       <StartScheduling />
       <div id="testimonials">
-        <Testimonial />
+        <TestimonialsAlternative/>
       </div>
       <div id="answers">
         <Answers />

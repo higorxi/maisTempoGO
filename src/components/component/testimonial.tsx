@@ -2,31 +2,34 @@
 
 import { useState, useEffect } from "react"
 import Image from 'next/image'
+import foto1 from "../../../public/testemunhos/foto1.jpg"
+import foto2 from "../../../public/testemunhos/foto2.jpg"
+import foto3 from "../../../public/testemunhos/foto3.jpg"
 
 export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const testimonials = [
     {
-      image: "/placeholder-user.jpg",
-      name: "John Doe",
-      city: "New York",
-      service: "Hair Styling",
+      image: foto1,
+      name: "João Batista",
+      city: "Porangatu, Goiás",
+      service: "Renovação da CNH",
       description: "The stylist was amazing and really listened to what I wanted. I am so happy with the results!",
       rating: 5,
     },
     {
-      image: "/placeholder-user.jpg",
+      image: foto2,
       name: "Jane Smith",
-      city: "Los Angeles",
-      service: "Massage",
+      city: "Anápolis, Goiás",
+      service: "RG - 1 VIA",
       description: "The massage therapist was incredibly skilled and really helped me relax. I will definitely be back.",
       rating: 4,
     },
     {
-      image: "/placeholder-user.jpg",
+      image: foto3,
       name: "Michael Johnson",
-      city: "Chicago",
-      service: "Facial",
+      city: "Rio Verde, Goiás",
+      service: "Emissão de passaporte",
       description: "The facial was so rejuvenating and my skin feels brand new. The staff was very professional.",
       rating: 3,
     },
@@ -40,7 +43,7 @@ export function Testimonial() {
   }, [testimonials.length])
   
   const currentTestimonial = testimonials[currentIndex]
-  
+  console.log(currentTestimonial.image);
   return (
     <section className="bg-blue-900 text-white py-12 px-6 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -67,12 +70,12 @@ export function Testimonial() {
                   </div>
                 </div>
                 <Image
-                  src="/placeholder.svg"
+                  src={currentTestimonial.image}
                   alt={currentTestimonial.name}
-                  width={800}
-                  height={500}
+                  width={300}
+                  height={150}
                   className="h-[300px] w-full object-cover"
-                  style={{ aspectRatio: "800/500", objectFit: "cover" }}
+                  style={{ aspectRatio: "300/150", objectFit: "cover" }}
                 />
                 <div className="absolute inset-0 z-10 flex flex-col items-start justify-end gap-4 bg-gradient-to-t from-blue-900/90 to-blue-900/0 p-6">
                   <p className="text-gray-300">&quot;{currentTestimonial.description}&quot;</p>

@@ -1,4 +1,6 @@
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
+import Logo from '../../../public/logo_amarela.png';
 
 export function Footer() {
   return (
@@ -6,9 +8,16 @@ export function Footer() {
       <div className="container mx-auto grid grid-cols-1 gap-12 px-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6 text-yellow-400" />
-            <span className="text-xl font-bold text-yellow-400">+</span>
-            <span className="text-lg font-bold text-yellow-100">TEMPO GO</span>
+          <Link href="/" className="flex items-center" prefetch={false}>
+        <Image
+          src={Logo}
+          alt="Logo + tempo"
+          width={85}
+          height={35}
+          className="w-full object-cover"
+          style={{ aspectRatio: '85/35', objectFit: 'cover' }}
+        />
+      </Link>
           </div>
           <div className="flex gap-4">
             <a href="#" className="text-white hover:text-yellow-400 hover:underline">

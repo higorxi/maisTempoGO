@@ -1,8 +1,88 @@
+"use client";
+import { useState, useEffect, useRef } from "react";
 import { Separator } from "@/components/ui/separator";
+import confetti from "canvas-confetti";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 export function Details() {
+  const [showConfetti, setShowConfetti] = useState(true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const firstName = "John"; 
+
+  useEffect(() => {
+    if (showConfetti && containerRef.current) {
+      const end = Date.now() + 2500; 
+      const duration = 2500;
+      const animationEnd = end + duration;
+
+      const interval = setInterval(() => {
+        if (Date.now() > animationEnd) {
+          clearInterval(interval);
+          return;
+        }
+        confetti({
+          particleCount: 40,
+          angle: 60,
+          spread: 105,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 40,
+          angle: 120,
+          spread: 75,
+          origin: { x: 1 }
+        });
+      }, 100);
+
+      const timer = setTimeout(() => {
+        setShowConfetti(false);
+      }, 2500);
+
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timer);
+      };
+    }
+  }, [showConfetti]);
+
+  const generatePDF = () => {
+    if (containerRef.current) {
+      html2canvas(containerRef.current).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const imgWidth = 210; 
+        const pageHeight = 295; 
+        const imgHeight = canvas.height * imgWidth / canvas.width;
+        let heightLeft = imgHeight;
+
+        let position = 0;
+
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+
+        while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          pdf.addPage();
+          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+        }
+
+        pdf.save(`${firstName}-recibo.pdf`);
+      });
+    }
+  };
+
+  useEffect(() => {
+    generatePDF();
+  }, []);
+
   return (
-    <div className="max-w-3xl mx-auto p-6 md:p-8 lg:p-10">
+    <div
+      ref={containerRef}
+      className="relative max-w-3xl mx-auto p-6 md:p-8 lg:p-10"
+      style={{ minHeight: '100vh', overflow: 'hidden' }} 
+    >
       <div className="bg-background rounded-lg shadow-lg overflow-hidden">
         <div className="bg-primary text-primary-foreground p-6 md:p-8 lg:p-10">
           <div className="flex items-center justify-between">
