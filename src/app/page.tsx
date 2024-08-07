@@ -4,15 +4,18 @@ import { Header } from "@/components/component/header";
 import { StartScheduling } from "@/components/component/start-scheduling";
 import { Testimonial } from "@/components/component/testimonial";
 
-
 export default function Home() {
   return (
     <>
-      <Header/>
-      <StartScheduling/>
-      <Testimonial/>
-      <Answers/>
-      <Footer/>
+      <Header />
+      <StartScheduling />
+      <div id="testimonials">
+        <Testimonial />
+      </div>
+      <div id="answers">
+        <Answers />
+      </div>
+      <Footer />
     </>
   );
 }

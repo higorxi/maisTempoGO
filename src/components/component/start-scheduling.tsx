@@ -1,7 +1,15 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 
 export function StartScheduling() {
+  const router = useRouter();
+
+  const handleStartScheduling = () => {
+    router.push('/scheduling');
+  };
+
   return (
     <section className="w-full py-20 bg-gradient-radial from-[#F0F9FF] via-[#F0F9FF]/80 to-[#F0F9FF]/20">
       <div className="w-full px-4 md:px-6 xl:max-w-6xl mx-auto">
@@ -11,7 +19,7 @@ export function StartScheduling() {
               Agende agora mesmo sua ida ao Vapt Vupt
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-              Escolha o órgão e os serviços que você necessita e comece a agendar sua ida.
+              Escolha o orgão e os serviços que você necessita e comece a agendar sua ida.
             </p>
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <DropdownMenu>
@@ -44,7 +52,9 @@ export function StartScheduling() {
               </DropdownMenu>
             </div>
             <div className="flex justify-center">
-              <Button className="w-full sm:w-auto">Iniciar Agendamento</Button>
+              <Button variant="main" className="w-full sm:w-auto" onClick={handleStartScheduling}>
+                Iniciar Agendamento
+              </Button>
             </div>
           </div>
           <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">

@@ -1,15 +1,15 @@
 import { Footer } from "@/components/component/footer";
 import { Header } from "@/components/component/header";
 import { HeaderAlternative } from "@/components/component/header-alternative";
-import { PaymentDetails } from "@/components/component/payment-details";
+import { StepByStepScheduling } from "@/components/component/step-by-step-scheduling";
 
 
 
-export default function Pagamento() {
+export default function Agendamento() {
   return (
     <>
       <HeaderAlternative/>
-      <PaymentDetails/>
+      <StepByStepScheduling/>
       <Footer/>
     </>
   );
