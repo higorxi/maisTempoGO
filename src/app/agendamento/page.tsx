@@ -9,9 +9,6 @@ export default function Agendamento() {
   return (
     <>
       <Header/>
-      <StartScheduling/>
-      <Testimonial/>
-      <Answers/>
       <Footer/>
     </>
   );

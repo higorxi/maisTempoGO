@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from 'next/image'
 
 export function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -55,14 +56,14 @@ export function Testimonial() {
                   </div>
                   <div className="flex items-center gap-1">
                     {[...Array(currentTestimonial.rating)].map((_, i) => (
-                      <StarIcon className="h-5 w-5 fill-primary" />
+                      <StarIcon key={i} className="h-5 w-5 fill-primary" />
                     ))}
                     {[...Array(5 - currentTestimonial.rating)].map((_, i) => (
-                      <StarIcon className="h-5 w-5 fill-muted stroke-muted-foreground" />
+                      <StarIcon key={i} className="h-5 w-5 fill-muted stroke-muted-foreground" />
                     ))}
                   </div>
                 </div>
-                <img
+                <Image
                   src="/placeholder.svg"
                   alt={currentTestimonial.name}
                   width={800}
@@ -71,7 +72,7 @@ export function Testimonial() {
                   style={{ aspectRatio: "800/500", objectFit: "cover" }}
                 />
                 <div className="absolute inset-0 z-10 flex flex-col items-start justify-end gap-4 bg-gradient-to-t from-background/90 to-background/0 p-6">
-                  <p className="text-muted-foreground">"{currentTestimonial.description}"</p>
+                  <p className="text-muted-foreground">&quot;{currentTestimonial.description}&quot;</p>
                   <p className="text-muted-foreground">{currentTestimonial.service}</p>
                 </div>
               </div>
