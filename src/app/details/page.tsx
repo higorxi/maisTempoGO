@@ -1,5 +1,5 @@
 import { Details } from "@/components/component/details";
-import { Footer } from "@/components/component/footer";
+import { FooterAlternative } from "@/components/component/footer-alternative";
 import { HeaderAlternative } from "@/components/component/header-alternative";
 
 
@@ -9,7 +9,7 @@ export default function Pagamento() {
     <>
       <HeaderAlternative/>
       <Details/>
-      <Footer/>
+      <FooterAlternative/>
     </>
   );
 }
