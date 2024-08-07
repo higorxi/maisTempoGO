@@ -1,40 +1,56 @@
-"use client"; 
+'use client';
 
-import { useCallback } from "react";
-import Link from "next/link";
+import { useCallback } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Logo from "../../../public/logo_amarela.png"
 
 export function Header() {
   const handleScroll = useCallback((event: any) => {
     event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
 
   return (
-    <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
+    <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4 bg-verdeGoias text-branco">
       <Link href="/" className="flex items-center" prefetch={false}>
-        <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">Teste</span>
+        <Image
+          src={Logo}
+          alt='Logo + tempo'
+          width={65}
+          height={25}
+          className="w-full object-cover"
+          style={{ aspectRatio: '65/25', objectFit: 'cover' }}
+        />
       </Link>
       <nav className="flex items-center space-x-4 md:space-x-6">
-        <Link href="/" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+        <Link href="/" className="text-sm font-medium hover:underline underline-offset-4 text-branco" prefetch={false}>
           Home
         </Link>
-        <a href="#testimonials" onClick={handleScroll} className="text-sm font-medium hover:underline underline-offset-4">
+        <a
+          href="#testimonials"
+          onClick={handleScroll}
+          className="text-sm font-medium hover:underline underline-offset-4 text-branco"
+        >
           Sobre nós
         </a>
-        <a href="#answers" onClick={handleScroll} className="text-sm font-medium hover:underline underline-offset-4">
+        <a
+          href="#answers"
+          onClick={handleScroll}
+          className="text-sm font-medium hover:underline underline-offset-4 text-branco"
+        >
           Dúvidas
         </a>
         <Link
           href="/scheduling"
-          className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-9 items-center justify-center rounded-md border border-verdeGoias bg-amareloGoias px-4 py-2 text-sm font-medium text-verdeGoias shadow-sm transition-colors hover:bg-amareloClaro hover:text-azulGoias focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-verdeGoias disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
-          Agendar Agora
+          AGENDAR AGORA
         </Link>
       </nav>
     </header>

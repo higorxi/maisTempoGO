@@ -2,79 +2,79 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12 px-6 text-muted-foreground">
+    <footer className="bg-green-900 py-12 px-6 text-white">
       <div className="container mx-auto grid grid-cols-1 gap-12 px-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6" />
-            <span className="text-xl font-bold">+</span><span className="text-lg font-bold">TEMPO GO</span>
+            <MountainIcon className="h-6 w-6 text-yellow-400" />
+            <span className="text-xl font-bold text-yellow-400">+</span>
+            <span className="text-lg font-bold text-yellow-100">TEMPO GO</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="text-muted-foreground hover:underline">
+            <a href="#" className="text-white hover:text-yellow-400 hover:underline">
               <TwitterIcon className="h-5 w-5" />
             </a>
-            <a href="#" className="text-muted-foreground hover:underline">
+            <a href="#" className="text-white hover:text-yellow-400 hover:underline">
               <FacebookIcon className="h-5 w-5" />
             </a>
-            <a href="#" className="text-muted-foreground hover:underline">
+            <a href="#" className="text-white hover:text-yellow-400 hover:underline">
               <InstagramIcon className="h-5 w-5" />
             </a>
-            <a href="#" className="text-muted-foreground hover:underline">
+            <a href="#" className="text-white hover:text-yellow-400 hover:underline">
               <LinkedinIcon className="h-5 w-5" />
             </a>
           </div>
         </div>
         <div className="grid gap-2">
-          
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-bold">Principais Serviços</h4>
-          <a href="#" className="text-sm hover:underline">
+          <h4 className="text-sm font-bold text-yellow-100">Principais Serviços</h4>
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             CNH - RENOVAÇÃO
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             RG - 1 VIA
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             RG - 2 VIA
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             SANEAGO - TRATAMENTO DE CASOS EXPECIONAIS
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             PROCON
           </a>
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-bold">Principais Órgãos</h4>
-          <a href="#" className="text-sm hover:underline">
+          <h4 className="text-sm font-bold text-yellow-100">Principais Órgãos</h4>
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             AGEHAB
           </a>
-          <a href="#" className="text-sm hover:underline">
-          AGRODEFESA
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
+            AGRODEFESA
           </a>
-          <a href="#" className="text-sm hover:underline">
-          COREN
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
+            COREN
           </a>
-          <a href="#" className="text-sm hover:underline">
-          DETRAN
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
+            DETRAN
           </a>
-          <a href="#" className="text-sm hover:underline">
-          IPASGO
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
+            IPASGO
           </a>
         </div>
         <div className="grid gap-2">
-          <h4 className="text-sm font-bold">Recursos</h4>
-          <a href="#" className="text-sm hover:underline">
+          <h4 className="text-sm font-bold text-yellow-100">Recursos</h4>
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             Blog
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             Documentation
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             Tutorials
           </a>
-          <a href="#" className="text-sm hover:underline">
+          <a href="#" className="text-sm text-white hover:text-yellow-400 hover:underline">
             Templates
           </a>
         </div>
@@ -82,10 +82,10 @@ export function Footer() {
       <div className="container mx-auto mt-12 flex flex-col items-center gap-4 px-4 text-xs sm:flex-row sm:justify-between">
         <p>&copy; 2024 Mais Tempo GO. Todos os direitos reservados.</p>
         <div className="flex gap-4">
-          <a href="/privacyPolicy" className="hover:underline">
+          <a href="/privacyPolicy" className="text-white hover:text-yellow-400 hover:underline">
             Política de Privacidade
           </a>
-          <a href="/termsOfUser" className="hover:underline">
+          <a href="/termsOfUser" className="text-white hover:text-yellow-400 hover:underline">
             Termos de Uso
           </a>
         </div>
@@ -93,7 +93,6 @@ export function Footer() {
     </footer>
   )
 }
-
 function FacebookIcon(props: any) {
   return (
     <svg

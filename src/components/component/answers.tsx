@@ -2,45 +2,51 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/component
 
 export function Answers() {
   return (
-    <section className="w-full py-12 px-6 md:py-24 lg:py-32">
+    <section className="w-full py-12 px-6 md:py-24 lg:py-32 bg-green-800">
       <div className="container mx-auto grid gap-10 px-4 md:grid-cols-2 md:gap-16 md:px-6">
         <div className="space-y-6">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Qual é o nosso serviço?</h2>
-            <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
-            Somos especializados em facilitar o agendamento de serviços no Vapt Vupt do estado de Goiás. Sabemos como pode ser complicado lidar com a burocracia e a espera, por isso, nossa missão é tornar esse processo o mais fácil e eficiente possível para você.
+            <h2 className="text-3xl font-bold tracking-tighter text-white md:text-4xl shadow-md p-4 rounded-lg bg-green-900">
+              Qual é o nosso serviço?
+            </h2>
+            <p className="mt-4 text-gray-200 md:text-xl/relaxed">
+              Somos especializados em facilitar o agendamento de serviços no Vapt Vupt do estado de Goiás. Sabemos como pode ser complicado lidar com a burocracia e a espera, por isso, nossa missão é tornar esse processo o mais fácil e eficiente possível para você.
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Nossas obrigações</h3>
-            <ul className="mt-4 space-y-2 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+            <h3 className="text-xl font-semibold text-white shadow-md p-2 rounded-lg bg-green-700">
+              Nossas obrigações
+            </h3>
+            <ul className="mt-4 space-y-2 text-gray-200">
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-yellow-400" />
                 <span>Realizamos o agendamento de sua ida ao Vapt Vupt</span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-yellow-400" />
                 <span>Lhe informamos sobre o status do seu agendamento</span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <CheckIcon className="mt-1 h-5 w-5 flex-shrink-0 text-yellow-400" />
                 <span>Buscamos as melhores datas e horários para o seu agendamento</span>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">O que não fazemos</h3>
-            <ul className="mt-4 space-y-2 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
+            <h3 className="text-xl font-semibold text-white shadow-md p-2 rounded-lg bg-green-700">
+              O que não fazemos
+            </h3>
+            <ul className="mt-4 space-y-2 text-gray-200">
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-600" />
                 <span>Não compartilhamos seus dados com terceiros</span>
               </li>
-              <li className="flex items-start gap-2">
-                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-600" />
                 <span>Não temos nenhum vínculo direto com o Vapt Vupt</span>
               </li>
-              <li className="flex items-start gap-2">
-                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-500" />
+              <li className="flex items-start gap-2 bg-green-600 p-2 rounded-lg shadow-sm hover:bg-green-500">
+                <XIcon className="mt-1 h-5 w-5 flex-shrink-0 text-red-600" />
                 <span>Não cobramos taxas ou penalidades ocultas</span>
               </li>
             </ul>
@@ -48,48 +54,50 @@ export function Answers() {
         </div>
         <div className="space-y-6">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Perguntas Frequentes</h2>
-            <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
-            Aqui estão as perguntas mais comuns que recebemos sobre nosso serviço. Se você tiver outras perguntas, não hesite em nos contatar.
+            <h2 className="text-3xl font-bold tracking-tighter text-white md:text-4xl shadow-md p-4 rounded-lg bg-green-900">
+              Perguntas Frequentes
+            </h2>
+            <p className="mt-4 text-gray-200 md:text-xl/relaxed">
+              Aqui estão as perguntas mais comuns que recebemos sobre nosso serviço. Se você tiver outras perguntas, não hesite em nos contatar.
             </p>
           </div>
           <div className="space-y-4">
             <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>Qual o valor do serviço?</span>
-                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-green-700 px-4 py-3 text-left font-medium transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-500 shadow-sm">
+                <span className="text-gray-100">Qual o valor do serviço?</span>
+                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
+              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
                 Our pricing is based on the number of users and the features you need. We offer a range of plans to fit
                 your budget and requirements.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>Posso cancelar o serviço?</span>
-                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-green-700 px-4 py-3 text-left font-medium transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-500 shadow-sm">
+                <span className="text-gray-100">Posso cancelar o serviço?</span>
+                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
+              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
                 You can cancel your subscription at any time by logging into your account and going to the billing
                 section. We don&apos;t require long-term contracts, so you can leave whenever you&apos;d like.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>Existe algum vinculo com os órgãos?</span>
-                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-green-700 px-4 py-3 text-left font-medium transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-500 shadow-sm">
+                <span className="text-gray-100">Existe algum vínculo com os órgãos?</span>
+                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
+              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
                 We offer a variety of support options, including email, live chat, and a comprehensive knowledge base.
                 Our team is dedicated to helping you get the most out of our service.
               </CollapsibleContent>
             </Collapsible>
             <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                <span>O serviço de vocês é ilegal?</span>
-                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-green-700 px-4 py-3 text-left font-medium transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-500 shadow-sm">
+                <span className="text-gray-100">O serviço de vocês é ilegal?</span>
+                <ChevronDownIcon className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180 text-gray-100" />
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-4 pt-2 text-muted-foreground">
+              <CollapsibleContent className="px-4 pt-2 text-black bg-white rounded-lg shadow-sm">
                 Yes, we offer a wide range of integrations with popular business tools and software. This allows you to
                 seamlessly connect our service with the tools you already use.
               </CollapsibleContent>
