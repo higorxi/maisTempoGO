@@ -16,7 +16,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="flex items-center justify-between px-4 py-3 md:px-8 md:py-5 bg-verdeGoias text-branco ">
+    <header className="flex items-center justify-between px-4 py-3 md:px-8 md:py-5 bg-verdeGoias text-branco">
       <Link href="/" className="flex items-center hover:scale-105" prefetch={false}>
         <Image
           src={Logo}
@@ -27,27 +27,31 @@ export function Header() {
           style={{ aspectRatio: '65/25', objectFit: 'cover' }}
         />
       </Link>
-      <nav className="flex items-center space-x-4 md:space-x-6 ">
-        <Link href="/" className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105" prefetch={false}>
+      <nav className="flex items-center space-x-4 md:space-x-6">
+        <Link
+          href="/"
+          className="text-xs md:text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105"
+          prefetch={false}
+        >
           Home
         </Link>
         <a
           href="#testimonials"
           onClick={handleScroll}
-          className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105 "
+          className="text-xxs md:text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105"
         >
           Sobre nós
         </a>
         <a
           href="#answers"
           onClick={handleScroll}
-          className="text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105"
+          className="text-xs md:text-sm font-bold hover:underline underline-offset-4 text-branco hover:scale-105"
         >
           Dúvidas
         </a>
         <Link
           href="/scheduling"
-          className="inline-flex h-9 items-center justify-center rounded-md border border-verdeGoias bg-amareloGoias px-4 py-2 text-sm font-medium text-verdeGoias shadow-sm transition-transform transform hover:scale-105 hover:bg-white hover:text-verdeGoias hover:border-verdeGoias focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-verdeGoias disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-8 md:h-9 items-center justify-center rounded-md border border-verdeGoias bg-amareloGoias px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-verdeGoias shadow-sm transition-transform transform hover:scale-105 hover:bg-white hover:text-verdeGoias hover:border-verdeGoias focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-verdeGoias disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
           AGENDAR AGORA
