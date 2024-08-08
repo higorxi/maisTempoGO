@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -8,10 +8,13 @@ import { Select } from '@/components/ui/select';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
+import { getOrgaos } from '@/services/dataService';
 
 export function StepByStepScheduling() {
   const [currentStep, setCurrentStep] = useState(1);
   const [idScheduling, setIdScheduling] = useState('')
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     fullName: '',
     cpf: '',
@@ -26,6 +29,25 @@ export function StepByStepScheduling() {
     date: '',
     time: '',
   });
+
+
+  useEffect(() => {
+    // Função para buscar dados da API
+    const fetchData = async () => {
+      try {
+        const response = await getOrgaos();
+        if (!response.ok) {
+          throw new Error('Erro na resposta da API');
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error: any) {
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const router = useRouter();
 
