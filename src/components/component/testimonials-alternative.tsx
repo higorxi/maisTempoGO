@@ -36,7 +36,7 @@ export function TestimonialsAlternative() {
                     </div>
                   </div>
                   <div className="mt-4 text-cinzaClaro">
-                   &ldquo;{testimonial.comment}&ldquo;
+                    &ldquo;{testimonial.comment}&ldquo;
                   </div>
                 </div>
               ))}
@@ -54,9 +54,9 @@ export function TestimonialsAlternative() {
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-8">
               {numbers.map((number, index) => (
-                <div className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-2 text-center" key={index}>
-                  <div className="text-4xl font-bold text-branco">{number.value}</div>
-                  <div className="text-cinzaClaro">{number.label}</div>
+                <div className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-2 text-center overflow-hidden">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-branco">{number.value}</div>
+                  <div className="text-sm sm:text-base text-cinzaClaro">{number.label}</div>
                 </div>
               ))}
             </div>
@@ -98,9 +98,9 @@ const numbers = [
   { value: "15K+", label: "Clientes" },
   { value: "95%", label: "Satisfação dos Clientes" },
   { value: "27+", label: "Cidades em Goiás" },
-  { value: "4.7/5", label: "Classificação no Reclame Aqui" },
-  { value: "15+", label: "Funcionários" },
-  { value: "1 dia útil", label: "Tempo para agendamento" },
+  { value: "4.7/5", label: "Nota no Reclame Aqui" },
+  { value: "12+", label: "Funcionários" },
+  { value: "1 dia útil", label: "Tempo máximo" },
 ]
 
 function StarIcon(props: any) {
