@@ -16,7 +16,10 @@ export function TestimonialsAlternative() {
             </div>
             <div className="grid gap-8 w-full">
               {testimonials.map((testimonial, index) => (
-                <div className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col justify-between h-full" key={index}>
+                <div
+                  className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col justify-between h-full"
+                  key={index} // A chave é necessária aqui
+                >
                   <div className="flex items-center gap-4">
                     <Avatar className="w-12 h-12 border border-branco">
                       <AvatarImage src={testimonial.image} alt={testimonial.name} />
@@ -54,7 +57,10 @@ export function TestimonialsAlternative() {
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-8">
               {numbers.map((number, index) => (
-                <div className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-2 text-center overflow-hidden">
+                <div
+                  className="bg-white bg-opacity-10 border border-branco rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-2 text-center overflow-hidden"
+                  key={index}
+                >
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-branco">{number.value}</div>
                   <div className="text-sm sm:text-base text-cinzaClaro">{number.label}</div>
                 </div>
